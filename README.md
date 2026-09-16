@@ -80,7 +80,7 @@ aile_mecellesi_rag/
 ### Steps
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Ibrahasan/family-code-rag.git
 cd aile_mecellesi_rag
 
 python -m venv venv
