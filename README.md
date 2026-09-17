@@ -204,13 +204,8 @@ Users may write questions using informal transliteration (`sh`→ş, `ch`→ç, 
 
 | Sual | Cavab |
 |---|---|
-| "Nikaha daxil olmaq üçün tibbi müayinə lazımdırmı?" | Azərbaycan Respublikasının Ailə Məcəlləsinə əsasən, nikaha daxil olmaq üçün tibbi müayinədən keçmək zəruridir. 
-
-Bu hüquqi tələb aşağıdakı maddələrlə tənzimlənir:
-
-* **Məcəllənin 11.1-ci maddəsinə əsasən**, nikahın bağlanması üçün nikaha daxil olan şəxslərin yazılı razılığı, nikah yaşına çatmaları və **13-cü maddəyə uyğun olaraq tibbi müayinədən keçmələri zəruridir**.
-* **Məcəllənin 13.1-ci maddəsinə əsasən**, nikaha daxil olmaq istəyən şəxslər siyahısı müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilən xəstəliklər üzrə tibbi müayinədən keçirlər. |
-| "şikəstlik” sözünün “xəsarət” sözü ilə əvəz edilməsi hansı qanunla heyata keçirilib" | Təqdim olunan kontekstə əsasən, "şikəstlik" sözünün "xəsarət" sözü ilə əvəz edilməsi 8 iyul 2022-ci il tarixli 581-VIQD nömrəli Azərbaycan Respublikasının Qanunu ilə həyata keçirilmişdir (**Maddə 32.2.1-ə əsasən**). |
+| "Nikaha daxil olmaq üçün tibbi müayinə lazımdırmı?" | Azərbaycan Respublikasının Ailə Məcəlləsinə əsasən, nikaha daxil olmaq üçün tibbi müayinədən keçmək zəruridir.<br><br>Bu hüquqi tələb aşağıdakı maddələrlə tənzimlənir:<br><br>• **Məcəllənin 11.1-ci maddəsinə əsasən**, nikahın bağlanması üçün nikaha daxil olan şəxslərin yazılı razılığı, nikah yaşına çatmaları və **13-cü maddəyə uyğun olaraq tibbi müayinədən keçmələri zəruridir**.<br>• **Məcəllənin 13.1-ci maddəsinə əsasən**, nikaha daxil olmaq istəyən şəxslər siyahısı müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilən xəstəliklər üzrə tibbi müayinədən keçirlər. |
+| "şikəstlik” sözünün “xəsarət” sözü ilə əvəz edilməsi hansı qanunla heyata keçirilib?" | Təqdim olunan kontekstə əsasən, "şikəstlik" sözünün "xəsarət" sözü ilə əvəz edilməsi 8 iyul 2022-ci il tarixli 581-VIQD nömrəli Azərbaycan Respublikasının Qanunu ilə həyata keçirilmişdir (**Maddə 32.2.1-ə əsasən**). |
 | Sənədə aid olmayan sual (məs. "Bakının əhalisi neçədir?") | "Təqdim olunan sənədlərdə bu suala birbaşa məlumat tapılmadı." |
 
 ---
