@@ -18,14 +18,28 @@ class FamilyCodeRAGEngine:
     them to their full parent articles before feeding them to the LLM for better context.
     """
     
-    SYSTEM_PROMPT = """Sən Azərbaycan Ailə Məcəlləsi üzrə sual-cavab köməkçisisən.
-Qaydalar:
-1. YALNIZ aşağıda verilən KONTEKST bölməsindəki məlumatdan istifadə et.
-2. Kontekstdə cavab yoxdursa, uydurma - "Sənəddə bu barədə birbaşa məlumat tapılmadı." de.
-3. Cavabı Azərbaycan dilində, detallı,geniş və aydın ver.
-4. Mümkünsə, hansı maddəyə əsaslandığını qeyd et (məs. "Maddə 13.2-yə görə...")."""
+#     SYSTEM_PROMPT = """Sən Azərbaycan Ailə Məcəlləsi üzrə sual-cavab köməkçisisən.
+# Qaydalar:
+# 1. YALNIZ aşağıda verilən KONTEKST bölməsindəki məlumatdan istifadə et.
+# 2. Kontekstdə cavab yoxdursa, uydurma - "Sənəddə bu barədə birbaşa məlumat tapılmadı." de.
+# 3. Cavabı Azərbaycan dilində, detallı,geniş və aydın ver.
+# 4. Mümkünsə, hansı maddəyə əsaslandığını qeyd et (məs. "Maddə 13.2-yə görə...")."""
 
-    def __init__(self) -> None:
+    SYSTEM_PROMPT = """Sən Azərbaycan Ailə Məcəlləsi üzrə ixtisaslaşmış, peşəkar və obyektiv Süni İntellekt hüquq məsləhətçisisən.
+Sənin vəzifən istifadəçilərin suallarına YALNIZ sənə təqdim olunan KONTEKST əsasında dəqiq, əhatəli və anlaşıqlı cavab verməkdir.
+
+QƏTİ QAYDALAR:
+1. MÜTLƏQ İSTİNAD: Həmişə qanunun nə dediyini konkret maddə nömrəsini göstərərək əsaslandır. İstanadları cümlənin içində və ya sonunda qalın şriftlə qeyd et (məsələn: **Maddə 13.2-yə əsasən...**).
+2. XƏYALİ MƏLUMAT YARATMA (NO HALLUCINATION): Yalnız və yalnız sənə verilən KONTEKST-dəki məlumatlardan istifadə et. Kontekstdən kənar heç bir hüquqi bilik və ya şəxsi fərziyyə uydurma.
+3. BİLMƏDİYİNİ ETİRAF ET: Əgər sualın cavabı verilmiş kontekstdə yoxdursa, istifadəçini yanltmamaq üçün sadəcə bunu de: "Təqdim olunan sənədlərdə bu suala birbaşa məlumat tapılmadı."
+4. PEŞƏKAR VƏ STRUKTURLU FORMAT: 
+   - Cavabı Azərbaycan dilində, geniş, detallı və hüquqi dildə formalaşdır.
+   - İstifadəçinin oxumasını asanlaşdırmaq üçün uzun mətnləri abzaslara böl.
+   - Şərtlər və ya hallar sadalananda mütləq işarələnmiş siyahılardan (bullet points: -, *) istifadə et.
+   - Əsas məqamları və hüquqi terminləri **qalın şriftlə** vurğula.
+5. OBYEKTİVLİK: Sən qərar verən hakim və ya vəkil deyilsən. Şəxsi hüquqi məsləhət (məs. "belə etməyiniz məsləhətdir") vermə, yalnız qanunun tələblərini izah et."""
+
+    def __init__(self) -> None:            
         """
         Initializes the RAG engine.
         Loads environment variables, establishes the GenAI client, connects to ChromaDB, 
@@ -197,6 +211,7 @@ Qaydalar:
             return "Sənəddə bu barədə məlumat tapılmadı."
             
         expanded_chunks = self.expand_to_full_articles(context_chunks)
+        print(expanded_chunks)
 
         return self.generate_answer(question, expanded_chunks)
 
@@ -208,8 +223,8 @@ def main() -> None:
     print("Initializing the engine...")
     rag = FamilyCodeRAGEngine()
     
-    test_question = "“Nikaha daxil olmaq üçün tibbi müayinə lazımdırmı?"
-    # test_question = "Bakının əhalisi neçədir?"
+    # test_question = "şikəstlik sözünün xəsarət sözü ilə əvəz edilməsi hansı qanunla heyata keçirilib"
+    test_question = "Bakının əhalisi neçədir?"
     
     print(f"\nQuestion: {test_question}")
     print("System is thinking...\n")
