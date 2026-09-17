@@ -29,7 +29,7 @@ class FamilyCodeRAGEngine:
 Sənin vəzifən istifadəçilərin suallarına YALNIZ sənə təqdim olunan KONTEKST əsasında dəqiq, əhatəli və anlaşıqlı cavab verməkdir.
 
 QƏTİ QAYDALAR:
-1. MÜTLƏQ İSTİNAD: Həmişə qanunun nə dediyini konkret maddə nömrəsini göstərərək əsaslandır. İstanadları cümlənin içində və ya sonunda qalın şriftlə qeyd et (məsələn: **Maddə 13.2-yə əsasən...**).
+1. MÜTLƏQ İSTİNAD: Həmişə qanunun nə dediyini konkret maddə nömrəsini göstərərək əsaslandır (məsələn: **Maddə 13.2-yə əsasən...**). Əgər mənbə maddə deyilsə, ümumi qanun adını çək, amma "source_document", "chunk" kimi texniki adları QƏTİYYƏN cavabında istifadə etmə.
 2. XƏYALİ MƏLUMAT YARATMA (NO HALLUCINATION): Yalnız və yalnız sənə verilən KONTEKST-dəki məlumatlardan istifadə et. Kontekstdən kənar heç bir hüquqi bilik və ya şəxsi fərziyyə uydurma.
 3. BİLMƏDİYİNİ ETİRAF ET: Əgər sualın cavabı verilmiş kontekstdə yoxdursa, istifadəçini yanltmamaq üçün sadəcə bunu de: "Təqdim olunan sənədlərdə bu suala birbaşa məlumat tapılmadı."
 4. PEŞƏKAR VƏ STRUKTURLU FORMAT: 
@@ -224,7 +224,7 @@ def main() -> None:
     rag = FamilyCodeRAGEngine()
     
     # test_question = "şikəstlik sözünün xəsarət sözü ilə əvəz edilməsi hansı qanunla heyata keçirilib"
-    test_question = "Bakının əhalisi neçədir?"
+    test_question = "İstifadə olunmuş sənədlər arasında 20 oktyabr 2006 tarixli hansı qanun var?"
     
     print(f"\nQuestion: {test_question}")
     print("System is thinking...\n")
